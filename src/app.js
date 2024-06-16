@@ -13,6 +13,10 @@ app.use(compression())
 
 // init db
 
+require('./dbs/init.mongodb')
+const { countConnect, checkOverLoad } = require('./helpers/check.connect');
+// countConnect()
+checkOverLoad()
 // init routes 
 
 app.get("/", (req, res, next) => {
