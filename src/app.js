@@ -21,13 +21,7 @@ const { countConnect, checkOverLoad } = require('./helpers/check.connect');
 // checkOverLoad()
 // init routes 
 
-app.get("/", (req, res, next) => {
-    const strCompress = 'hello Fantipjs'
-    return res.status(200).json({
-        message: "welcome to fantips",
-        metadata: strCompress.repeat(100000)
-    })
-})
+app.use('/',require('./routes'))
 
 // handling error
 
